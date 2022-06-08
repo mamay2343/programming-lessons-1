@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/mamay2343/programming-lessons-1#readme",
   "dependencies": {
-    "axios": "^0.26.1"
+    "axios": "^0.26.1",
+    "express": "^4.18.1",
+    "save": "^2.5.0"
   }
 }
