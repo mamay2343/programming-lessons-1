@@ -6,7 +6,7 @@ const port = 3000;
 const ROOT = path.join(__dirname);
 // создаем парсер для данных application/x-www-form-urlencoded
 
-app.use('/static', express.static(path.join(ROOT, 'static')));
+
 app.use(express.urlencoded({
     extended: false
 }));
@@ -18,7 +18,8 @@ app.get('/:id', (req, res) => {
 app.post("/login",function (request, response) {
             if (!request.body) return response.sendStatus(400);
             console.log(request.body);
-            response.send(`${request.body.login}`);
+            
+            response.sendFile(path.join(ROOT, 'semantika.html'));
 });
    
 app.listen(3000, ()=> console.log("Сервер запущен..."));
